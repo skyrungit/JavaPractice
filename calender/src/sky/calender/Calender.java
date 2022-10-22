@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Calender {
     private static final int[] MAX_DAYS = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
-    public int maxDaysofMonth(int month) {
+    public int getMaxDaysofMonth(int month) {
         return MAX_DAYS[month - 1];
     }
 
@@ -21,12 +21,15 @@ public class Calender {
         Scanner sc = new Scanner(System.in);
         Calender cal = new Calender();
         
-        System.out.println("Input Month : ");
-        int month = sc.nextInt();
+        System.out.println("Input Repeat Times : ");
+        int repeat = sc.nextInt();
         
-        int[] maxDays = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-        
-        System.out.printf("%d Month has max date %d. \n", month, cal.maxDaysofMonth(month));
+        for (int i = 0; i < repeat; i++) {
+            System.out.println("Input Month : ");
+            int month = sc.nextInt();
+            System.out.printf("%d Month has max date %d. \n", month, cal.getMaxDaysofMonth(month));            
+        }
+        System.out.println("BYE.");
         
         sc.close();
     }
