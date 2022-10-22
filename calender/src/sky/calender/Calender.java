@@ -18,6 +18,8 @@ public class Calender {
         System.out.println("15 16 17 18 19 20 21");
         System.out.println("22 23 24 25 26 27 28");
         
+        String PROMPT = "cal>";
+        
         Scanner sc = new Scanner(System.in);
         Calender cal = new Calender();
         
@@ -26,6 +28,7 @@ public class Calender {
         
         for (int i = 0; i < repeat; i++) {
             System.out.println("Input Month : ");
+            System.out.print(PROMPT);
             int month = sc.nextInt();
             System.out.printf("%d Month has max date %d. \n", month, cal.getMaxDaysofMonth(month));            
         }
